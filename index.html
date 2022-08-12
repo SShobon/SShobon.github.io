@@ -9,7 +9,8 @@
 <body>
     <h1>Hello World</h1>
     <div id="html"></div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
         document.getElementById("html").innerHTML = "<div>" + require("config.json").text + "</div>";
     </script>
 </body>
