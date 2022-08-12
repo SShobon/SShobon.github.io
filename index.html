@@ -8,24 +8,9 @@
 
 <body>
     <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <div id="html"></div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js">
-        const http = require("http");
-
-        const port = 8080;
-        let payload = "";
-
-        http.createServer((req, res) => {
-            req.on("data", (chunk) => {
-                // POST DATA
-            });
-            req.on("end", () => {
-                res.writeHead(200, {
-                    'Content-Length': Buffer.byteLength(payload),
-                    "Content-Type": "text/plain"
-                }).end(payload);
-            });
-        }).listen(port);
+        document.getElementById("html").innerHTML = "<div>" + require("config.json").text + "</div>";
     </script>
 </body>
 
