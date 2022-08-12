@@ -10,7 +10,8 @@
     <h1>Hello World</h1>
     <div id="html"></div>
     <script type="text/javascript">
-        document.getElementById("html").innerHTML = "<div>" + require("config.json").text + "</div>";
+        const config = require('./config.json');
+        document.getElementById("html").innerHTML = "<div>" + config.token + "</div>";
     </script>
 </body>
 
